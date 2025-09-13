@@ -1,225 +1,772 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0d0d0d;
-      color: #fff;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      color: #39ff14; /* Neon Green */
-    }
-
-    a, .btn {
-      color: #39ff14;
-    }
-
-    .btn-primary {
-      background: #39ff14;
-      border: none;
-      color: #0d0d0d;
-      font-weight: 600;
-    }
-
-    .btn-primary:hover {
-      background: #28cc0c;
-      color: #fff;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 40px;
-      color: #39ff14;
-    }
-
-    .logo-small {
-      border-radius: 10px;
-      box-shadow: 0 0 12px #39ff14;
-    }
-
-    .experience, .education {
-      margin: 30px auto;
-      padding: 20px;
-      max-width: 900px;
-      border: 1px solid #39ff14;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(57, 255, 20, 0.6);
-      background: #111;
-    }
-
-    .experience h2, .education h2 {
-      font-size: 1.6rem;
-      margin-bottom: 15px;
-    }
-
-    .experience p, .education p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 1px solid #39ff14;
-    }
-
-    .logo {
-      width: 120px;
-      height: auto;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0 0 12px #39ff14;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Syed Nasir Uddin</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #0a0a0a;
+  color: white;
+  overflow-x: hidden;
+}
+/* Header */
+.navbar-brand img {
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+/* Home Section */
+.About {
+  animation: slideTop 1s ease forwards;
+  padding: 60px 6% 40px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideRight 2s ease forwards;
+}
+.home-content h3 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.home-content h4 {
+  font-size: 2.75rem;
+  font-weight: 300;
+  margin: 15px 0;
+}
+.home-content h4 span {
+  color: #00ff88;
+  background: linear-gradient(45deg, #00ff88, #00cc6a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.butt {
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 15px 35px;
+  margin: 20px 12px;
+  color: white;
+  border: 2px solid #00ff88;
+  background: linear-gradient(45deg, #00ff88, #00cc6a);
+  box-shadow: 0 0 50px rgba(0, 255, 136, 0.4);
+  animation: slideRight 2s ease forwards;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.butt:hover {
+  background: linear-gradient(45deg, #00cc6a, #00ff88);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 0 60px rgba(0, 255, 136, 0.6);
+}
+.social-media {
+  margin: 30px 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.social-media a {
+  display: inline-block;
+  padding: 15px;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 40px rgba(0, 255, 136, 0.3);
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.3s ease;
+  animation: slideRight 2s ease forwards;
+}
+.social-media a:hover {
+  background: linear-gradient(45deg, #00ff88, #00cc6a);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 60px rgba(0, 255, 136, 0.6);
+}
+.social-media a svg {
+  color: #00ff88;
+}
+.social-media a:hover svg {
+  color: white;
+}
+.home-img img {
+  animation: slideRight 1s ease forwards;
+  border-radius: 50%;
+  border: 4px solid #00ff88;
+  box-shadow: 0 0 50px rgba(0, 255, 136, 0.5);
+  transition: all 0.3s ease;
+}
+.home-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 70px rgba(0, 255, 136, 0.7);
+}
+/* Animations */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Section Headers */
+.AboutMe h1,
+.Projects-section h1,
+.Skills-section h1,
+.Connect-section h1 {
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease forwards;
+}
+/* Carousel Items */
+.carousel-items {
+  padding: 30px 5% 20px;
+  text-align: justify;
+  line-height: 1.8;
+  animation: fadeIn 1.5s ease forwards;
+}
+.carousel-items h3,
+.carousel-items h5 {
+  text-align: center;
+  color: #00ff88;
+  margin: 25px 0 15px 0;
+  font-size: 1.8rem;
+}
+.carousel-items img {
+  border-radius: 15px;
+  margin: 20px auto;
+  display: block;
+  max-width: 150px;
+  height: auto;
+  border: 3px solid #00ff88;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+  transition: all 0.3s ease;
+}
+.carousel-items img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px rgba(0, 255, 136, 0.6);
+}
+/* Project Items */
+.project-items {
+  padding: 30px 3% 20px;
+  text-align: justify;
+  line-height: 1.7;
+  animation: fadeIn 1.5s ease forwards;
+}
+.project-items h3 {
+  text-align: center;
+  color: #00ff88;
+  margin: 25px 0 20px 0;
+  font-size: 2rem;
+}
+.project-items img {
+  border-radius: 15px;
+  margin: 20px auto;
+  display: block;
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 3px solid #00ff88;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+  transition: all 0.3s ease;
+}
+.project-items img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(0, 255, 136, 0.6);
+}
+/* Skills Section */
+.Skills-section {
+  padding: 50px 5%;
+  animation: slideTop 1s ease forwards;
+}
+.Skills-section img {
+  border-radius: 15px;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border: 3px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  transition: all 0.3s ease;
+  object-fit: contain;
+  background: white;
+  padding: 5px;
+}
+.Skills-section img:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 0 40px rgba(0, 255, 136, 0.6);
+}
+.skill-category h3 {
+  color: #00ff88;
+  text-align: center;
+  margin: 30px 0 20px 0;
+  font-size: 1.8rem;
+}
+/* Connect Section */
+.Connect-section {
+  padding: 50px 5%;
+  text-align: center;
+  animation: slideTop 1s ease forwards;
+}
+.Connect-section .social-media {
+  justify-content: center;
+  margin: 30px 0;
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+  .home-img {
+    order: -1;
+    margin-bottom: 30px;
+  }
+  .home-content h3 {
+    font-size: 28px;
+  }
+  .home-content h4 {
+    font-size: 2rem;
+  }
+  .social-media {
+    justify-content: center;
+  }
+  .Skills-section img {
+    width: 60px;
+    height: 60px;
+  }
+}
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+/* Glow effect for sections */
+section {
+  position: relative;
+}
+section::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 136, 0.1), transparent);
+  z-index: -1;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+section:hover::before {
+  opacity: 1;
+}
+/* Loading animation */
+.loading-text {
+  background: linear-gradient(45deg, #00ff88, #ffffff, #00cc6a);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+</style>
 </head>
 <body>
-
-  <!-- ==================== HEADER ==================== -->
-  <header class="text-center py-5">
-    <h1>My Portfolio</h1>
-    <p>Data Science | AI | Web Development</p>
-    <a href="#projects" class="btn btn-primary">View My Work</a>
-  </header>
-
-  <!-- ==================== ABOUT ==================== -->
-  <section id="about" class="container py-5">
-    <h1 class="section-title">About Me</h1>
-    <p>
-      I am a passionate developer with experience in Data Science, AI, and Full-Stack Development.
-      Skilled in Python, Machine Learning, and modern web technologies. 
-      I enjoy solving real-world problems through code and research.
-    </p>
-  </section>
-
-  <!-- ==================== EDUCATION (SRU) ==================== -->
-  <section id="education" class="container py-5">
-    <h1 class="section-title">Education</h1>
-    
-    <div class="education text-center">
-      <h2>SR University</h2>
-      <!-- SRU logo (uploaded OIP.jpg) -->
-      <img
-        src="OIP.jpg"
-        alt="SR University Logo"
-        class="img-fluid mb-3 logo-small"
-        style="max-width:200px;"
-      />
-      <ul style="display:inline-block; text-align:left; margin-top:15px;">
-        <li><strong>Bachelor of Technology in Computer Science & Engineering</strong></li>
-        <li><strong>CGPA:</strong> 9.0/10</li>
-        <li>
-          <h6>Coursework</h6>
+<header>
+  <div class="px-3 py-2 text-bg-dark border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="#About" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none navbar-brand">
+          <img src="https://via.placeholder.com/40x40/00ff88/ffffff?text=SN" alt="Syed Nasir" width="30" height="30" class="rounded-circle me-2" />
+          Syed Nasir Uddin
+        </a>
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li>
+            <a href="#About" class="nav-link text-white">
+              <i class="bi bi-person-workspace"></i> About Me
+            </a>
+          </li>
+          <li>
+            <a href="#Projects" class="nav-link text-white">
+              <i class="bi bi-speedometer2"></i> Projects
+            </a>
+          </li>
+          <li>
+            <a href="#Skills" class="nav-link text-white">
+              <i class="bi bi-code-slash"></i> Skills
+            </a>
+          </li>
+          <li>
+            <a href="#Connect" class="nav-link text-white">
+              <i class="bi bi-person-fill-add"></i> Connect
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="About" id="About">
+  <div class="home">
+    <div class="home-content">
+      <h4>Hello I'm</h4>
+      <h3>Syed Nasir Uddin</h3>
+      <h4>
+        And I'm good at
+        <span class="multiple-text loading-text">Data Science</span>
+      </h4>
+    </div>
+    <div class="home-img">
+      <img src="https://via.placeholder.com/300x300/00ff88/ffffff?text=AI+Profile" alt="Profile pic" height="300px" />
+    </div>
+  </div>
+  <div class="social-media">
+    <a href="mailto:syednasiruddin485@gmail.com" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/syed-nasir-uddin-0b55a52a3" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+      </svg>
+    </a>
+    <a href="https://github.com/SyedNasirUddin" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+      </svg>
+    </a>
+    <a href="https://leetcode.com/u/23kGgxXY1Q/" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+        <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0" />
+      </svg>
+    </a>
+    <a href="https://www.kaggle.com/nasir008" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-database" viewBox="0 0 16 16">
+        <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313M13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A5 5 0 0 0 13 5.698M14 4c0-1.313-.967-2.5-2.715-3.24C10.234.25 9.156 0 8 0c-1.156 0-2.234.25-3.285.76C3.002 1.5 2 2.686 2 4v9c0 1.313.967 2.5 2.715 3.24C5.766 16.75 6.844 17 8 17c1.156 0 2.234-.25 3.285-.76C12.998 15.5 14 14.314 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.711 6.427 10 8 10s3.022-.289 4.096-.777A5 5 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777A5 5 0 0 0 13 11.698"/>
+      </svg>
+    </a>
+    <button class="btn butt" onclick="resume()">Download Resume</button>
+  </div>
+</section>
+<section class="AboutMe">
+  <div class="container py-5">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Experience Section -->
+        <div class="carousel-item active carousel-items">
+          <div class="text-center">
+            <h1>Experience</h1>
+            <hr style="border-color: #00ff88; border-width: 2px;" />
+          </div>
+          <div class="mb-4">
+            <h5>NIT Warangal (May - Jun 2025)</h5>
+            <img src="https://github.com/SyedNasirUddin/SyedNasirUddinProtfolio/raw/main/NITW_logo.png" alt="NITW Logo" class="img-fluid mb-3" />
+            <p>Summer Intern – Conducted AIoT hands-on sessions; implemented ML models with Python, Mediapipe & OpenCV.</p>
+            <p><strong>Tech Stack:</strong> Python, Machine Learning, OpenCV, Mediapipe, AIoT</p>
+          </div>
+          <hr style="border-color: #00ff88;" />
+          <div class="mb-4">
+            <h5>CodeAlpha Pvt Ltd (Aug - Sep 2024)</h5>
+            <img src="https://github.com/SyedNasirUddin/SyedNasirUddinProtfolio/raw/main/CodeAlpha_logo.png" alt="CodeAlpha Logo" class="img-fluid mb-3" />
+            <p>Data Science Intern – Worked on real-world datasets (10k+ rows), visualization, and ML tools.</p>
+            <p><strong>Tech Stack:</strong> Python, Data Analysis, Machine Learning, Power BI</p>
+          </div>
+          <hr style="border-color: #00ff88;" />
+          <div>
+            <h5>AICTE - EduSkills (Jul - Sep 2024)</h5>
+            <img src="https://github.com/SyedNasirUddin/SyedNasirUddinProtfolio/raw/main/AICTE_logo.jpeg" alt="AICTE Logo" class="img-fluid mb-3" />
+            <p>Data Engineering Intern – Built ETL pipelines with Python & SQL; worked on cloud tools & automation.</p>
+            <p><strong>Tech Stack:</strong> Python, SQL, ETL, Cloud Computing</p>
+          </div>
+        </div>
+        <!-- Education Section -->
+        <div class="carousel-item carousel-items">
+          <div class="text-center">
+            <h1>Education</h1>
+            <hr style="border-color: #00ff88; border-width: 2px;" />
+          </div>
+          <div class="mb-4">
+            <h3>SR University - (2022-2026)</h3>
+            <img src="https://github.com/SyedNasirUddin/SyedNasirUddinProtfolio/raw/main/SRU_logo.jpg" alt="SR University Logo" class="img-fluid mb-3" />
+            <ul>
+              <li><strong>Bachelor of Technology in Computer Science & Engineering</strong></li>
+              <li><strong>CGPA:</strong> 9.0/10</li>
+              <li>
+                <h6>Coursework</h6>
+                <ul>
+                  <li>Data Structures and Algorithms</li>
+                  <li>Machine Learning & AI</li>
+                  <li>Database Management Systems</li>
+                  <li>Computer Networks</li>
+                  <li>Software Engineering</li>
+                  <li>Data Science & Analytics</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+<hr style="border-color: #00ff88;" />
+<!-- SKILL SECTION -->
+<section id="Skills" class="Skills-section container">
+  <div class="heading text-center">
+    <h1>Skills</h1>
+  </div>
+  <div class="skill-category">
+    <h3>Programming Languages</h3>
+    <div class="row justify-content-center">
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+      </div>
+    </div>
+  </div>
+  <div class="skill-category">
+    <h3>Frameworks & Tools</h3>
+    <div class="row justify-content-center">
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit" />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_no_text_.png" alt="OpenCV" />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="PowerBI" />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://mediapipe.dev/images/mediapipe_small.png" alt="Mediapipe" />
+      </div>
+    </div>
+  </div>
+  <div class="skill-category">
+    <h3>Cloud & Certifications</h3>
+    <div class="row justify-content-center">
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 col-lg-1 d-flex justify-content-center">
+        <img src="https://www.cisco.com/c/dam/assets/brand-center/logo-cisco.svg" alt="Cisco" />
+      </div>
+    </div>
+  </div>
+</section>
+<hr style="border-color: #00ff88;" />
+<!-- PROJECTS SECTION -->
+<section class="Projects-section py-5" id="Projects">
+  <div class="container">
+    <div class="heading text-center mb-5">
+      <h1>Projects</h1>
+    </div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- HDI Recommendation System -->
+        <div class="carousel-item active project-items" data-bs-interval="10000">
+          <h3 class="text-center">HDI Recommendation System</h3>
+          <img src="https://via.placeholder.com/800x400/00ff88/ffffff?text=HDI+Recommendation+Dashboard" alt="HDI Recommendation System" class="img-fluid mx-auto d-block mb-4" style="max-height: 300px;" />
+          <p>
+            Recommendation system for top countries/cities using HDI (Human Development Index) metrics. Built with advanced data analysis, machine learning algorithms, and interactive visualizations to help users discover the best places to live based on comprehensive development
+            indicators.
+          </p>
+          <h5>Technology Stack</h5>
           <ul>
-            <li>Data Structures and Algorithms</li>
-            <li>Machine Learning & AI</li>
-            <li>Database Management Systems</li>
-            <li>Computer Networks</li>
-            <li>Software Engineering</li>
-            <li>Data Science & Analytics</li>
+            <li>Programming Languages: Python, Streamlit</li>
+            <li>Machine Learning: Pandas, NumPy, Scikit-learn</li>
+            <li>Data Visualization: Plotly, Matplotlib</li>
+            <li>Deployment: Streamlit Cloud</li>
           </ul>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ==================== EXPERIENCE ==================== -->
-  <section id="experience" class="container py-5">
-    <h1 class="section-title">Experience</h1>
-
-    <!-- NIT Warangal -->
-    <div class="experience">
-      <h2>NIT Warangal (May - Jun 2025)</h2>
-      <img src="NITW_logo.png" alt="NITW Logo" class="logo" />
-      <p>
-        Summer Intern – Conducted AIoT hands-on sessions; implemented ML models 
-        with Python, Mediapipe & OpenCV.
-      </p>
-      <p><b>Tech Stack:</b> Python, Machine Learning, OpenCV, Mediapipe, AIoT</p>
-    </div>
-
-    <!-- CodeAlpha -->
-    <div class="experience">
-      <h2>CodeAlpha Pvt Ltd (Aug - Sep 2024)</h2>
-      <img src="CodeAlpha_logo.png" alt="CodeAlpha Logo" class="logo" />
-      <p>
-        Data Science Intern – Worked on real-world datasets (10k+ records) applying 
-        supervised ML techniques.
-      </p>
-    </div>
-
-    <!-- SR University -->
-    <div class="experience">
-      <h2>SR University</h2>
-      <img src="SRU_logo.jpg" alt="SR University Logo" class="logo" />
-      <p>
-        Worked on academic & project-based research with focus on software and AI.
-      </p>
-    </div>
-
-    <!-- AICTE -->
-    <div class="experience">
-      <h2>AICTE</h2>
-      <img src="AICTE_logo.jpeg" alt="AICTE Logo" class="logo" />
-      <p>
-        AICTE recognized internship certification in emerging technologies.
-      </p>
-    </div>
-  </section>
-
-  <!-- ==================== PROJECTS ==================== -->
-  <section id="projects" class="container py-5">
-    <h1 class="section-title">Projects</h1>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="experience">
-          <h2>Sign Language to Speech</h2>
+          <div class="text-center">
+            <button class="btn butt mx-2" onclick="hdiCode()">Project Code</button>
+            <button class="btn butt mx-2" onclick="hdiLive()">Live Demo</button>
+          </div>
+        </div>
+        <!-- SpeakMySign -->
+        <div class="carousel-item project-items" data-bs-interval="8000">
+          <h3 class="text-center">SpeakMySign (ASL to Text & Speech)</h3>
+          <img src="https://via.placeholder.com/800x400/00ff88/ffffff?text=ASL+Recognition+System" alt="SpeakMySign ASL Recognition" class="img-fluid mx-auto d-block mb-4" style="max-height: 300px;" />
           <p>
-            Built an AIoT system using Raspberry Pi, Edge Impulse, and OpenCV 
-            to convert ASL gestures into speech.
+            Built real-time American Sign Language (ASL) sign recognition system with 90% accuracy using computer vision and machine learning. Converts hand gestures to text and speech for enhanced accessibility and communication.
           </p>
+          <h5>Technology Stack</h5>
+          <ul>
+            <li>Computer Vision: OpenCV, MediaPipe</li>
+            <li>Machine Learning: TensorFlow, Keras</li>
+            <li>Programming: Python</li>
+            <li>Real-time Processing: CV2, NumPy</li>
+          </ul>
+          <div class="text-center">
+            <button class="btn butt mx-2" onclick="aslCode()">Project Code</button>
+            <button class="btn butt mx-2" onclick="aslDemo()">Demo Video</button>
+          </div>
+        </div>
+        <!-- Insurance Cost Prediction -->
+        <div class="carousel-item project-items">
+          <h3 class="text-center">Insurance Cost Prediction System</h3>
+          <img src="https://via.placeholder.com/800x400/00ff88/ffffff?text=Insurance+ML+Model" alt="Insurance Cost Prediction" class="img-fluid mx-auto d-block mb-4" style="max-height: 300px;" />
+          <p>
+            Predictive machine learning models for insurance claim cost forecasting with comprehensive data preprocessing, feature engineering, and model optimization. Helps insurance companies make data-driven decisions for premium calculations.
+          </p>
+          <h5>Technology Stack</h5>
+          <ul>
+            <li>Machine Learning: Scikit-learn, XGBoost</li>
+            <li>Data Processing: Pandas, NumPy</li>
+            <li>Visualization: Seaborn, Matplotlib</li>
+            <li>Deployment: Streamlit</li>
+          </ul>
+          <div class="text-center">
+            <button class="btn butt mx-2" onclick="insuranceCode()">Project Code</button>
+            <button class="btn butt mx-2" onclick="insuranceLive()">Live Demo</button>
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="experience">
-          <h2>Titanic Classification</h2>
-          <p>
-            Machine Learning model to predict passenger survival using Python, Pandas, and Scikit-learn.
-          </p>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+<hr style="border-color: #00ff88;" />
+<!-- Certifications Section -->
+<section class="Projects-section py-5">
+  <div class="container">
+    <div class="heading text-center mb-5">
+      <h1>Certifications & Accomplishments</h1>
+    </div>
+    <div class="carousel-items">
+      <div class="row">
+        <div class="col-md-6">
+          <h5 style="color: #00ff88; font-size: 1.5rem;">Certifications</h5>
+          <ul style="list-style-type: none; padding-left: 0;">
+            <li style="margin-bottom: 15px;">
+              <a href="https://www.credly.com/badges/354ffacb-beaf-4ef4-b5e4-d00c5159310d/public_url" style="color: #00ff88; text-decoration: none; font-size: 1.1rem;" target="_blank">
+                🅰️ AWS Cloud Foundations
+              </a>
+            </li>
+
+            <li style="margin-bottom: 15px;">
+              <a href="https://www.credly.com/badges/245c339f-1725-4ec6-a717-89faa1d2033e/public_url" style="color: #00ff88; text-decoration: none; font-size: 1.1rem;" target="_blank">
+                🅰️ AWS Data Engineering
+              </a>
+            </li>
+
+            <li style="margin-bottom: 15px;">
+              <span style="color: #00ff88; font-size: 1.1rem;">🔷 Microsoft Certified (Azure AI, Machine Learning Fundamentals)</span>
+            </li>
+
+            <li style="margin-bottom: 15px;">
+              <a href="https://www.credly.com/badges/9488327b-47fb-4f29-ae63-322d00a6e191/public_url" style="color: #00ff88; text-decoration: none; font-size: 1.1rem;" target="_blank">
+                🌐 Cisco Data Analytics Essentials
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5 style="color: #00ff88; font-size: 1.5rem;">Accomplishments</h5>
+          <ul style="list-style-type: none; padding-left: 0;">
+            <li style="margin-bottom: 15px; color: #00ff88; font-size: 1.1rem;">📊 Top 10% Academic Performer (IV Sem, SR University)</li>
+            <li style="margin-bottom: 15px; color: #00ff88; font-size: 1.1rem;">💻 Hackathon Participant – 12-hour coding challenge at SRU</li>
+            <li style="margin-bottom: 15px; color: #00ff88; font-size: 1.1rem;">🤝 Community Service – Volunteered under LORD NGO for elderly care</li>
+            <li style="margin-bottom: 15px; color: #00ff88; font-size: 1.1rem;">🏅 Multiple Data Science Competition Participant</li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ==================== CONTACT ==================== -->
-  <section id="contact" class="container py-5">
-    <h1 class="section-title">Contact</h1>
-    <p class="text-center">
-      Email: <a href="mailto:youremail@example.com">youremail@example.com</a> <br />
-      LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a> <br />
-      GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a>
-    </p>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer>
-    <p>&copy; 2025 My Portfolio | Designed with 💚 in Neon</p>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+</section>
+<hr style="border-color: #00ff88;" />
+<section id="Connect" class="Connect-section">
+  <h1>Connect</h1>
+  <div class="social-media">
+    <a href="https://www.linkedin.com/in/syed-nasir-uddin-0b55a52a3" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+      </svg>
+    </a>
+    <a href="https://github.com/SyedNasirUddin" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+      </svg>
+    </a>
+    <a href="https://leetcode.com/u/23kGgxXY1Q/" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+        <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0" />
+      </svg>
+    </a>
+    <a href="https://www.kaggle.com/nasir008" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-database" viewBox="0 0 16 16">
+        <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313M13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A5 5 0 0 0 13 5.698M14 4c0-1.313-.967-2.5-2.715-3.24C10.234.25 9.156 0 8 0c-1.156 0-2.234.25-3.285.76C3.002 1.5 2 2.686 2 4v9c0 1.313.967 2.5 2.715 3.24C5.766 16.75 6.844 17 8 17c1.156 0 2.234-.25 3.285-.76C12.998 15.5 14 14.314 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.711 6.427 10 8 10s3.022-.289 4.096-.777A5 5 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777A5 5 0 0 0 13 11.698"/>
+      </svg>
+    </a>
+    <a href="mailto:syednasiruddin485@gmail.com" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+        <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
+        <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
+      </svg>
+    </a>
+  </div>
+  <div class="mt-4">
+    <p style="font-size: 1.2rem; color: #00ff88;">Email: syednasiruddin485@gmail.com</p>
+    <p style="font-size: 1.2rem; color: #00ff88;">Phone: +91 6304321894</p>
+  </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+// Initialize typed.js for the multiple-text span
+var typed = new Typed(".multiple-text", {
+  strings: ["Data Science", "Machine Learning", "AI Development", "Backend Development", "Data Engineering"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
+});
+// Scroll animations
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", function () {
+    document.querySelectorAll(".Projects-section").forEach(function (section) {
+      if (isElementInViewport(section)) {
+        section.classList.remove("animated");
+      } else {
+        section.classList.add("animated");
+      }
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", function () {
+    document.querySelectorAll(".AboutMe").forEach(function (section) {
+      if (isElementInViewport(section)) {
+        section.classList.remove("animated");
+      } else {
+        section.classList.add("animated");
+      }
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", function () {
+    document.querySelectorAll(".Skills-section").forEach(function (section) {
+      if (isElementInViewport(section)) {
+        section.classList.remove("animated");
+      } else {
+        section.classList.add("animated");
+      }
+    });
+  });
+});
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight ||
+    document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+}
+// Project functions
+function hdiCode() {
+  window.open("https://github.com/SyedNasirUddin/HDI-Recommendation", "_blank");
+}
+function hdiLive() {
+  window.open("https://hdirecommender-ec2xqkkijpe3jd8n2wjyxz.streamlit.app/", "_blank");
+}
+function aslCode() {
+  window.open("https://github.com/SyedNasirUddin/SpeakMySign", "_blank");
+}
+function aslDemo() {
+  window.open("https://github.com/SyedNasirUddin/SpeakMySign", "_blank");
+}
+function insuranceCode() {
+  window.open("https://github.com/SyedNasirUddin/Insurance-Prediction", "_blank");
+}
+function insuranceLive() {
+  window.open("https://insurancecostestimator-3bzqjdswzgpwfmfc35juua.streamlit.app/", "_blank");
+}
+function resume() {
+  window.open('#', '_blank'); // Replace with your actual resume URL
+  alert('Please add your resume URL to make this functional!');
+}
+</script>
 </body>
 </html>
